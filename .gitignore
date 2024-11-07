@@ -2,9 +2,6 @@
 # https://github.com/github/gitignore/blob/main/WordPress.gitignore
 
 # Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
 /wp-admin/
 /wp-content/index.php
 /wp-content/languages
@@ -20,12 +17,10 @@
 # Configuration
 wp-config.php
 
-# Example themes
-#/wp-content/themes/twenty*/
-
-# Example plugin
+# Ignore all plugins, including Akismet
+/wp-content/plugins/*
 /wp-content/plugins/hello.php
-#/wp-content/plugins/akismet
+/wp-content/plugins/akismet  # Ensure Akismet plugin is excluded
 
 # Uploads
 /wp-content/uploads/
@@ -36,9 +31,6 @@ wp-config.php
 # htaccess
 /.htaccess
 
-# Ignore all plugins
-/wp-content/plugins/*
-
 # Ignore all themes except twentytwentyfour
 /wp-content/themes/*
-!/wp-content/themes/twentytwentyfour/  # This line includes the twentytwentyfour theme
+!/wp-content/themes/twentytwentyfour/  # Include only twentytwentyfour theme
