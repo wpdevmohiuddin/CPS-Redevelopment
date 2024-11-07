@@ -1,0 +1,24 @@
+name: Deploy to WP Engine via SFTP
+
+on:
+  push:
+    branches:
+      - main  # Trigger the action on push to the 'main' branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Use the latest version of Ubuntu
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3  # Checkout the repository code
+
+    - name: Upload via SFTP
+      uses: appleboy/ssh-action@v0.1.4  # Action to upload via SFTP
+      with:
+        host: ${{ secrets.SFTP_HOST }}  # Your SFTP host from secrets
+        username: ${{ secrets.SFTP_USERNAME }}  # Your SFTP username from secrets
+        password: ${{ secrets.SFTP_PASSWORD }}  # Your SFTP password from secrets
+        port: 2222  # The SFTP port (use 2222 as provided)
+        source: "./wp-content/*"  # Source path (adjust if you need specific files or directories)
+        target: "/wp-content/"  # Target path on your WP Engine server
