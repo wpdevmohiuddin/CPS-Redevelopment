@@ -1,4 +1,4 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
+# WordPress - ignore core, configuration, examples, uploads, and logs.
 # https://github.com/github/gitignore/blob/main/WordPress.gitignore
 
 # Core
@@ -36,14 +36,9 @@ wp-config.php
 # htaccess
 /.htaccess
 
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
+# Ignore all plugins
+/wp-content/plugins/*
 
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-/wp-content/themes
+# Ignore all themes except twentytwentyfour
+/wp-content/themes/*
+!/wp-content/themes/twentytwentyfour/  # This line includes the twentytwentyfour theme
