@@ -20,7 +20,7 @@ wp-config.php
 # Ignore all plugins, including Akismet
 /wp-content/plugins/*
 /wp-content/plugins/hello.php
-/wp-content/plugins/akismet  # Ensure Akismet plugin is excluded
+/wp-content/plugins/akismet  
 
 # Uploads
 /wp-content/uploads/
@@ -33,4 +33,4 @@ wp-config.php
 
 # Ignore all themes except twentytwentyfour
 /wp-content/themes/*
-!/wp-content/themes/twentytwentyfour/  # Include only twentytwentyfour theme
+!/wp-content/themes/twentytwentyfour/ 
