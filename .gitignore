@@ -33,4 +33,4 @@ wp-config.php
 
 # Ignore all themes except twentytwentyfour
 /wp-content/themes/*
-!/wp-content/themes/twentytwentyfour/ 
+!/wp-content/themes/twentytwentytwo/ 
